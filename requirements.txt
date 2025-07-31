@@ -1,0 +1,10 @@
+streamlit>=1.32.0
+python-dotenv>=1.0.0
+langchain-google-genai>=0.0.6
+PyPDF2>=3.0.1
+python-docx>=1.1.0
+transformers>=4.40.0
+torch>=2.0.0
+scipy>=1.10.0
+numpy>=1.23.0
+regex
