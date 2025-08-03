@@ -23,8 +23,8 @@ llm = ChatGoogleGenerativeAI(
 # 🧭 Sidebar Navigation
 # =====================
 st.set_page_config(page_title="FocusBot", layout="wide")
-st.sidebar.title("💬 AI Chat Assistant – Powered by LLMs")
-page = st.sidebar.radio("Navigate", ["🤖 Chatbot", "📄 Document Reader", "🎥Watch Youtube"])
+st.sidebar.title("📌 FocusBot Navigation")
+page = st.sidebar.radio("Choose a feature", ["🤖 Chatbot", "📄 Document Reader", "🎥Watch Youtube"])
 
 # =====================
 # 🤖 Chatbot Page
@@ -46,6 +46,10 @@ if page == "🤖 Chatbot":
         response = llm.invoke(user_input)
         reply = response.content
         st.session_state.chat_history.append(("assistant", reply))
+        st.rerun()
+         # Optional: Clear chat
+    if st.button("🧹 Clear Chat"):
+        st.session_state.chat_history = []
         st.rerun()
 
 # =====================
@@ -149,6 +153,7 @@ elif page == "🎥Watch Youtube":
             st.error("❌ Invalid YouTube URL format. Please check the link.")
 
     st.markdown("---")    
+
 
 
 
