@@ -104,7 +104,7 @@ elif page == "📄 Document Reader":
 # =====================
 # 🎥 Study Tube Page (YouTube)
 # =====================
-elif page == "🧑‍🏫 Focus Mode – YouTube Learning Without Distractions":
+elif page == "🎥Watch Youtube":
     st.set_page_config(page_title="Study Tube", layout="wide")
     st.title("🧠 Study Tube - Learn Better without Distractions")
 
@@ -148,5 +148,6 @@ elif page == "🧑‍🏫 Focus Mode – YouTube Learning Without Distractions":
             st.error("❌ Invalid YouTube URL format. Please check the link.")
 
     st.markdown("---")    
+
 
 
