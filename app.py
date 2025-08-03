@@ -22,6 +22,7 @@ llm = ChatGoogleGenerativeAI(
 # =====================
 # 🧭 Sidebar Navigation
 # =====================
+st.set_page_config(page_title="FocusBot", layout="wide")
 st.sidebar.title("💬 AI Chat Assistant – Powered by LLMs")
 page = st.sidebar.radio("Navigate", ["🤖 Chatbot", "📄 Document Reader", "🎥Watch Youtube"])
 
@@ -148,6 +149,7 @@ elif page == "🎥Watch Youtube":
             st.error("❌ Invalid YouTube URL format. Please check the link.")
 
     st.markdown("---")    
+
 
 
 
