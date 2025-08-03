@@ -22,14 +22,14 @@ llm = ChatGoogleGenerativeAI(
 # =====================
 # 🧭 Sidebar Navigation
 # =====================
-st.sidebar.title("📚 Gemini Toolkit")
-page = st.sidebar.radio("Navigate", ["🤖 Chatbot", "📄 Document Reader", "🎥 Study Tube"])
+st.sidebar.title("💬 AI Chat Assistant – Powered by LLMs")
+page = st.sidebar.radio("Navigate", ["🤖 Chatbot", "📄 Document Reader", "🎥Watch Youtube"])
 
 # =====================
 # 🤖 Chatbot Page
 # =====================
 if page == "🤖 Chatbot":
-    st.title("🤖 Gemini ChatBot")
+    st.title("🤖 Smart Chat – Ask Anything, Anytime")
 
     if "chat_history" not in st.session_state:
         st.session_state.chat_history = []
@@ -51,7 +51,7 @@ if page == "🤖 Chatbot":
 # 📄 Document Reader Page
 # =====================
 elif page == "📄 Document Reader":
-    st.title("📄 Gemini Document Reader")
+    st.title("🧾 Summarize, search, and quiz any document")
 
     uploaded_file = st.file_uploader("Upload PDF, DOCX, or TXT", type=["pdf", "docx", "txt"])
 
@@ -104,7 +104,7 @@ elif page == "📄 Document Reader":
 # =====================
 # 🎥 Study Tube Page (YouTube)
 # =====================
-elif page == "🎥 Study Tube":
+elif page == "🧑‍🏫 Focus Mode – YouTube Learning Without Distractions":
     st.set_page_config(page_title="Study Tube", layout="wide")
     st.title("🧠 Study Tube - Learn Better without Distractions")
 
@@ -148,4 +148,5 @@ elif page == "🎥 Study Tube":
             st.error("❌ Invalid YouTube URL format. Please check the link.")
 
     st.markdown("---")    
+
 
